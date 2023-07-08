@@ -1,0 +1,231 @@
+/* mengatur tampilan form */
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 10px;
+  background: #931fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+h1 {
+  text-align: center;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: tomato;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 span {
+  background-color: orange;
+  border-radius: 5px;
+  padding: 5px px;
+  color: #fff;
+}
+
+/* mengatur tampilan label */
+.form-input label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  resize: none;
+}
+
+/* mengatur tampilan input dan textarea */
+.form-input input,
+.form-input textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dac9c9;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  resize: none;
+}
+
+/* mengatur tampilan select */
+.form-input select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  appearance: none;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat right center / 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+/* mengatur tampilan tombol */
+.form-input button {
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.form-input button:hover {
+  background-color: #0b7dda;
+}
+
+.alert {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.alert-error {
+  background-color: #f2dede;
+  color: #a94442;
+}
+/* Mengatur font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* Gaya untuk kalender */
+.flatpickr-calendar {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  width: 300px;
+}
+
+/* Gaya untuk header bulan */
+.flatpickr-month {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flatpickr-month .flatpickr-prev-month,
+.flatpickr-month .flatpickr-next-month {
+  color: #999;
+  cursor: pointer;
+}
+
+/* Gaya untuk nama hari */
+.flatpickr-weekdays {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flatpickr-weekday {
+  color: #555;
+  flex: 1;
+  padding: 8px 0;
+  text-align: center;
+}
+
+/* Gaya untuk tanggal */
+.flatpickr-days {
+  padding: 5px;
+}
+
+.flatpickr-day {
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.flatpickr-day:hover:not(.flatpickr-disabled) {
+  background-color: tomato;
+}
+
+.flatpickr-day.flatpickr-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.flatpickr-day.today {
+  background-color: #272725;
+  font-weight: 500;
+}
+
+/* Gaya untuk tanggal terpilih */
+.flatpickr-day.selected:not(.flatpickr-disabled) {
+  background-color: #1890ff;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Gaya untuk tanggal terpilih pada rentang */
+.flatpickr-range .flatpickr-day.selected {
+  background-color: #1890ff;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Gaya untuk bulan terpilih */
+.flatpickr-monthSelect-month {
+  color: #1890ff;
+}
+
+/* Gaya untuk tahun terpilih */
+.flatpickr-yearSelect-year {
+  color: #1890ff;
+}
+
+/* Gaya untuk tombol 'Hari ini' */
+.flatpickr-current-month .flatpickr-day.today {
+  background-color: #fff;
+  color: #1890ff;
+  font-weight: 500;
+  border: 1px solid #1890ff;
+}
+
+/* Gaya untuk input tanggal */
+.flatpickr-input {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Gaya untuk ikon kalender */
+.flatpickr-calendar-icon {
+  color: #999;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+

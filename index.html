@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Kemitraan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo Baru.jpg" type="image/x-icon">
+  <link rel="icon" href="img/logo Baru-modified.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="form-container">
+    <h1>Kemitraan <br><span>Jafa Boga Artha</span></h1>
+    <form name="form-kontak">
+      <div class="form-input">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required>
+      </div>
+      <div class="form-input">
+        <label for="alamat-rumah">Alamat Rumah:</label>
+        <textarea id="alamat-rumah" name="alamat-rumah"
+          placeholder="Alamat lengkap terdiri dari Provinsi, Kabupaten, Kecamatan, Desa, Kelurahan dan juga kode POS"
+          rows="4" required></textarea>
+      </div>
+      <div class="form-input">
+        <label for="alamat-usaha">Alamat Lokasi Usaha:</label>
+        <textarea id="alamat-usaha" name="alamat-usaha" rows="4" required></textarea>
+      </div>
+      <div class="form-input">
+        <label for="no-hp">Nomor Handphone:</label>
+        <input type="text" id="no-hp" name="no-hp" pattern="[0-9]{10,12}|[0-9]{13}|[0-9]{14}" required>
+      </div>
+      
+      
+      <div class="form-input">
+        <label for="email">Alamat Email:</label>
+        <input type="text" id="email" name="email" placeholder="emailkamu@mail.com">
+      </div>
+      <div class="form-input">
+        <label for="franchise">Nama Franchise:</label>
+        <select id="franchise" name="nama-franchise" onchange="showPaket()" required>
+          <option value="">--Pilih Franchise--</option>
+          <option value="You Need Mie">You Need Mie</option>
+          <option value="Mentoast">Mentoast</option>
+          <option value="My Bestea">My Bestea</option>
+          <option value="Raja Steak">Raja Steak</option>
+          <option value="Chick Ichick">Chick Ichick</option>
+          <option value="Chacarica">Chacarica</option>
+          <option value="Tahu Nyonyor">Tahu Nyonyor</option>
+          <option value="Kuy Cheesetea">Kuy Cheesetea</option>
+          <option value="Chickuruyuk">Chickuruyuk</option>
+          <option value="Republik Coklat">Republik Coklat</option>
+          <option value="Nice Coffe">Nice Coffe</option>
+          <option value="Boba Empire">Boba Empire</option>
+          <option value="Mizterpi">Mizterpi</option>
+          <option value="Overthink Drink">Overthink Drink</option>
+          <option value="Chocopedia">Chocopedia</option>
+
+
+        </select>
+      </div>
+
+      <div class="form-input">
+        <label for="paket">Paket Usaha:</label>
+        <select id="paket" name="nama-paket" required>
+          <option value="">--Pilih Paket--</option>
+                    <!--You Need Mie-->
+          <option data-franchise="You Need Mie" value="Youneedmie paket Hemat">Paket Hemat</option>
+          <option data-franchise="You Need Mie" value="Youneedmie paket Portable">Paket Portable</option>
+          <option data-franchise="You Need Mie" value="Youneedmie paket Reguler">Paket Reguler</option>
+          <option data-franchise="You Need Mie" value="Youneedmie paket Platinum">Paket Platinum</option>
+          <option data-franchise="You Need Mie" value="Youneedmie paket kontainer">Paket Kontainer</option>
+                    <!--Mentoast-->
+          <option data-franchise="Mentoast" value="Mentoast paket Superhemat">Paket Super Hemat</option>
+          <option data-franchise="Mentoast" value="Mentoast paket Hemat">Paket Hemat</option>
+          <option data-franchise="Mentoast" value="Mentoast paket Portable">Paket Portable</option>
+          <option data-franchise="Mentoast" value="Mentoast paket Reguler">Paket Reguler</option>
+          <option data-franchise="Mentoast" value="Mentoast paket Platinum">Paket Platinum</option>
+                    <!--Mybestea-->
+          <option data-franchise="My Bestea" value="My Bestea paket Superhemat">Paket Super Hemat</option>
+          <option data-franchise="My Bestea" value="Mybestea paket Hemat">Paket Hemat</option>
+          <option data-franchise="My Bestea" value="Mybestea paket Portable">Paket Portable</option>
+          <option data-franchise="My Bestea" value="Mybestea paket Reguler">Paket Reguler</option>
+          <option data-franchise="My Bestea" value="Mybestea paket Platinum">Paket Platinum</option>
+          <option data-franchise="My Bestea" value="Mybestea paket kontainer">Paket Kontainer</option>
+          <!--Raja Steak-->
+          <option data-franchise="Raja Steak" value="Raja steak paket Super Hemat">Paket Super Hemat</option>
+          <option data-franchise="Raja Steak" value="Raja steak paket Hemat">Paket Hemat</option>
+          <option data-franchise="Raja Steak" value="Raja steak paket Portable">Paket Portable</option>
+          <option data-franchise="Raja Steak" value="Raja steak paket Reguler">Paket Reguler</option>
+          <option data-franchise="Raja Steak" value="Raja steak paket Platinum">Paket Platinum</option>
+          <option data-franchise="Raja Steak" value="Raja steak paket kontainer">Paket Kontainer</option>
+          <!--Chick Ichik-->
+          <option data-franchise="Chick Ichick" value="Chick Ichick paket Superhemat">Paket Super Hemat</option>
+          <option data-franchise="Chick Ichick" value="Chick Ichick paket Hemat">Paket Hemat</option>
+          <option data-franchise="Chick Ichick" value="Chick Ichick paket Portable">Paket Portable</option>
+          <option data-franchise="Chick Ichick" value="Chick Ichick paket Reguler">Paket Reguler</option>
+          <option data-franchise="Chick Ichick" value="Chick Ichick paket Platinum">Paket Platinum</option>
+          <option data-franchise="Chick Ichick" value="Chick Ichick paket kontainer">Paket Kontainer</option>
+          <!--Chacharica-->
+          <option data-franchise="Chacarica" value="Chacarica Paket Superhemat">Paket Super Hemat</option>
+          <option data-franchise="Chacarica" value="Chacarica paket Hemat">Paket Hemat</option>
+          <option data-franchise="Chacarica" value="Chacarica paket Portable">Paket Portable</option>
+          <option data-franchise="Chacarica" value="Chacarica paket Reguler">Paket Reguler</option>
+          <option data-franchise="Chacarica" value="Chacarica paket Platinum">Paket Platinum</option>
+          <option data-franchise="Chacarica" value="Chacarica paket kontainer">Paket Kontainer</option>
+          <!--Tahu Nyonyor-->
+          <option data-franchise="Tahu Nyonyor" value="Tahu Nyonyor Paket Superhemat">Paket Super Hemat</option>
+          <option data-franchise="Tahu Nyonyor" value="Tahu Nyonyor paket Hemat">Paket Hemat</option>
+          <option data-franchise="Tahu Nyonyor" value="Tahu Nyonyor paket Portable">Paket Portable</option>
+          <option data-franchise="Tahu Nyonyor" value="Tahu Nyonyor paket Reguler">Paket Reguler</option>
+          <option data-franchise="Tahu Nyonyor" value="Tahu Nyonyor paket Platinum">Paket Platinum</option>
+          <option data-franchise="Tahu Nyonyor" value="Tahu Nyonyor paket kontainer">Paket Kontainer</option>
+          <!--Kuy Cheestea-->
+          <option data-franchise="Kuy Cheesetea" value="Kuy Cheesetea paket Superhemat">Paket Super Hemat</option>
+          <option data-franchise="Kuy Cheesetea" value="Kuy cheesetea paket Hemat">Paket Hemat</option>
+          <option data-franchise="Kuy Cheesetea" value="Kuy cheesetea paket Portable">Paket Portable</option>
+          <option data-franchise="Kuy Cheesetea" value="Kuy cheesetea paket Reguler">Paket Reguler</option>
+          <option data-franchise="Kuy Cheesetea" value="Kuy cheesetea paket Platinum">Paket Platinum</option>
+          <option data-franchise="Kuy Cheesetea" value="Kuy cheesetea paket kontainer">Paket Kontainer</option>
+          <!--Chickuruyuk-->
+          <option data-franchise="Chickuruyuk" value="Chickuruyuk paket Superhemat">Paket Super Hemat</option>
+          <option data-franchise="Chickuruyuk" value="Chickuruyuk paket Hemat">Paket Hemat</option>
+          <option data-franchise="Chickuruyuk" value="Chickuruyuk paket Portable">Paket Portable</option>
+          <option data-franchise="Chickuruyuk" value="Chickuruyuk paket Reguler">Paket Reguler</option>
+          <option data-franchise="Chickuruyuk" value="Chickuruyuk paket Platinum">Paket Platinum</option>
+          <option data-franchise="Chickuruyuk" value="Chickuruyuk paket kontainer">Paket Kontainer</option>
+          <!--Republik Coklat-->
+          <option data-franchise="Republik Coklat" value="Republik Coklat Booth">Paket Booth</option>
+          <option data-franchise="Republik Coklat" value="Republik Coklat Booth dan Mesin">Paket Booth dan Mesin</option>
+          <!--Nice Cofee-->
+          <option data-franchise="Nice Coffe" value="Nice Coffe Paket Superhemat">Paket Super Hemat</option>
+          <option data-franchise="Nice Coffe" value="Nice coffe paket Hemat">Paket Hemat</option>
+          <option data-franchise="Nice Coffe" value="Nice coffe paket Portable">Paket Portable</option>
+          <option data-franchise="Nice Coffe" value="Nice coffe paket Reguler">Paket Reguler</option>
+          <option data-franchise="Nice Coffe" value="Nice coffe paket Platinum">Paket Platinum</option>
+          <option data-franchise="Nice Coffe" value="Nice coffe paket kontainer">Paket Kontainer</option>
+          <!--Boba Empire-->
+          <option data-franchise="Boba Empire" value="Boba Empire paket Superhemat">Paket Super Hemat</option>
+          <option data-franchise="Boba Empire" value="Bobaempire paket Hemat">Paket Hemat</option>
+          <option data-franchise="Boba Empire" value="Bobaempire paket Portable">Paket Portable</option>
+          <option data-franchise="Boba Empire" value="Bobaempire paket Reguler">Paket Reguler</option>
+          <option data-franchise="Boba Empire" value="Bobaempire paket Platinum">Paket Platinum</option>
+          <option data-franchise="Boba Empire" value="Bobaempire paket kontainer">Paket Kontainer</option>
+          <!--Mizterpi-->
+          <option data-franchise="Mizterpi" value="Mizterpi paket Superhemat">Paket Super Hemat</option>
+          <option data-franchise="Mizterpi" value="Mizterpi paket Hemat">Paket Hemat</option>
+          <option data-franchise="Mizterpi" value="Mizterpi paket Portable">Paket Portable</option>
+          <option data-franchise="Mizterpi" value="Mizterpi paket Reguler">Paket Reguler</option>
+          <option data-franchise="Mizterpi" value="Mizterpi paket Platinum">Paket Platinum</option>
+          <option data-franchise="Mizterpi" value="Mizterpi paket kontainer">Paket Kontainer</option>
+
+           <!--Overthink Drink -->
+           <option data-franchise="Overthink Drink" value="Overthink Drink paket Juragan">Paket Juragan</option>
+           <option data-franchise="Overthink Drink" value="Overthink Drink paket Sultan">Paket Sultan</option>
+           <!--Chocopedia-->
+          <option data-franchise="Chocopedia" value="Chocopedia paket Superhemat">Paket Super Hemat</option>
+          <option data-franchise="Chocopedia" value="Chocopedia paket Hemat">Paket Hemat</option>
+          <option data-franchise="Chocopedia" value="Chocopedia paket Portable">Paket Portable</option>
+          <option data-franchise="Chocopedia" value="Chocopedia paket Reguler">Paket Reguler</option>
+          <option data-franchise="Chocopedia" value="Chocopedia paket Platinum">Paket Platinum</option>
+          <option data-franchise="Chocopedia" value="Chocopedia paket kontainer">Paket Kontainer</option>
+          </option>
+        </select>
+
+
+      </div>
+
+      <div class="form-input">
+        <label for="sumber-informasi">Sumber Informasi tentang Paket Usaha:</label>
+        <select id="sumber-informasi" name="sumber-informasi" required>
+          <option value="">-- Pilih Sumber Informasi --</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Instagram">Instagram</option>
+          <option value="TikTok">Tik Tok</option>
+          <option value="Iklan">Iklan</option>
+        </select>
+      </div>
+      <div class="form-input">
+        <label for="tanggal">Tanggal Opening Outlet:</label>
+        <div class="input-group">
+          <input type="text" id="tanggal" name="tanggal" class="form-control" required>
+          <div class="input-group-append">
+            <span class="input-group-text">
+              <i class="fas fa-calendar-alt"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="form-input">
+        <label for="pembayaran">Pembayaran:</label>
+        <select id="pembayaran" name="pembayaran" required>
+          <option value="" selected disabled>Pilih Metode Pembayaran</option>
+          <option value="DP">DP</option>
+          <option value="Cash">Cash</option>
+          <option value="Marketplace">Marketplace</option>
+          <option value="cod">COD</option>
+          <option value="Transfer">Transfer Lunas</option>
+        </select>
+        <div class="form-input">
+          <label for="deal-maker">CS Marketing:</label>
+          <select id="deal-maker" name="deal-maker" required>
+            <option value="" selected disabled>Pilih CS Marketing</option>
+            <option value="Livia">Livia</option>
+            <option value="Reka">Reka</option>
+            <option value="Risma">Risma</option>
+          </select>
+
+          <button type="submit">Kirim</button>
+    </form>
+  </div>
+  </div>
+  <p
+    style="text-align: center; font-weight: inherit; color: rgb(250, 250, 250); font-family: 'Poppins', sans-serif; font-size: 15px; background-color:rgb(181, 46, 22); border-radius: 7px; cursor: auto; ">
+    Harap Konfirmasi ke CS setelah pengisian form selesai !!
+  </p>
+
+  <script>
+
+    function showPaket() {
+      var selectedFranchise = document.getElementById("franchise").value;
+      var paketElements = document.querySelectorAll("[data-franchise]");
+
+      for (var i = 0; i < paketElements.length; i++) {
+        var paketElement = paketElements[i];
+
+        if (paketElement.getAttribute("data-franchise") === selectedFranchise) {
+          paketElement.style.display = "block";
+        } else {
+          paketElement.style.display = "none";
+        }
+      }
+    }
+  </script>
+
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyRpIv854AuyU0RrzlrqgaL8b2Jt9HWX__A4ICf1iTiRPb8Kc3Y7BIVRezXJZvNT6uN6g/exec';
+    const form = document.forms['form-kontak'];
+    let isSubmitting = false;
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      if (isSubmitting) {
+        return;
+      }
+
+      isSubmitting = true;
+
+      alert('Kami sedang mengirimkan jawaban formulir Anda. Silakan tunggu sebentar!');
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          if (response.ok) {
+            alert('Formulir terkirim! Silakan konfirmasi dengan CS kami. Terima kasih telah bergabung!');
+            form.reset();
+          } else {
+            alert('Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.');
+          }
+
+          isSubmitting = false;
+        })
+        .catch(error => {
+          alert('Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.');
+          console.error('Error!', error.message);
+
+          isSubmitting = false;
+        });
+    });
+
+  </script>
+
+  <script>
+    flatpickr("#tanggal", {
+      dateFormat: "j F Y",
+      altInput: true,
+      altFormat: "j F Y",
+      disableMobile: "true",
+      onChange: function (selectedDates, dateStr, instance) {
+        instance.element.blur();
+      },
+      onReady: function (selectedDates, dateStr, instance) {
+        instance.element.blur();
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.ctrlKey && e.keyCode == 85) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+
+</html>
